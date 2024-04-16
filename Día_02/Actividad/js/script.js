@@ -38,11 +38,32 @@ userchoice = prompt(" -> (1)Campers\n -> (2)Trainers\n -> (3)Registar nuevos cam
 
 if (userchoice == "1"){
     console.clear()
-    console.log("%c ------Menú Camper------\n   Seleccione la acción a realizar:\n -> (1)Ver Informacion\n -> (2)Ver Notas\n -> (3)Ver grupos", "color:blue;");
-    var rta = prompt("-> (1)Ver Informacion\n -> (2)Ver Notas\n -> (3)Ver grupos");
+    console.log("%c ------Menú Camper------\n   Seleccione la acción a realizar:\n -> (1)Ver Informacion\n -> (2)Ver Notas\n -> (3)Ver grupos\n -> (4)Borrar Camper", "color:blue;");
+    var rta = prompt("-> (1)Ver Informacion\n -> (2)Ver Notas\n -> (3)Ver grupos\n -> (4)Borrar Camper");
     if (rta == "1"){
         console.table(campers);
-    };
+    }
+        else if (rta == "2"){
+        //IMPRIMIR NOTAS
+
+        }
+            else if (rta == "3"){
+            //IMPRIMIR GRUPOS
+
+                }
+                    else if (rta == "4"){
+                        
+                        console.log("%c ------Campers Actuales------", "color: #ff0099;");
+                        console.table(campers);
+                        console.clear
+                        var imoption = prompt("--Ingrese la identificación del camper a borrar--");
+                        window.alert("Se borró exitosamente :D");
+
+                        console.clear
+                        console.log("%c ------Campers Actuales------", "color: #ff0099;");
+                        delete campers[imoption]
+                        console.table(campers);
+                    }
 
     
 } else {
