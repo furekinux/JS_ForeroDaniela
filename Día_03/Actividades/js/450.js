@@ -11,6 +11,13 @@
  * @param {number} key
  * @return {TreeNode}
  */
+
 var deleteNode = function(root, key) {
+    console.log("root=\n",root)
+
+    console.log("key=\n",key)
     
+    if ((index in root) == key){
+        delete item
+    }
 };
