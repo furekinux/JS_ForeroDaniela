@@ -1,4 +1,4 @@
-let userchoice = "0"
+let userchoice = 0
 
 var campers = {
     "001":{
@@ -6,14 +6,16 @@ var campers = {
         nombre: "a",
         apellidos: "dg fbg",
         sala:"Art",
-        ruta:"Java"
+        ruta:"Java",
+        grupo:"P1"
     },
     "002":{
         id: "456",
         nombre: "e",
         apellidos: "dvfd fdvf",
         sala: "Sput",
-        ruta: "NoteDS"
+        ruta: "NoteDS",
+        grupo:"M1"
     }
 }
 
@@ -22,13 +24,15 @@ var trainers = {
         id: "123",
         name: "a",
         secname: "dg fbg",
-        sala:"art"
+        sala:"art",
+        grupo:"P1"
     },
     "miguel":{
         id: "456",
         name: "e",
         secname: "dvfd fdvf",
-        sala: "sput"
+        sala: "sput",
+        grupo:"M1"
     }
 }
 
@@ -36,7 +40,7 @@ var trainers = {
 console.log("%c ------Menú Principal------\n   Bienvenido usuario, seleccione una opción:\n -> (1)Campers\n -> (2)Trainers\n -> (3)Registar nuevos campers\n -> (4)Salir", "color:green;");
 userchoice = prompt(" -> (1)Campers\n -> (2)Trainers\n -> (3)Registar nuevos campers\n -> (4)Salir");
 
-if (userchoice == "1"){
+if (Number(userchoice) == 1){
     console.clear()
     console.log("%c ------Menú Camper------\n   Seleccione la acción a realizar:\n -> (1)Ver Informacion\n -> (2)Ver Notas\n -> (3)Ver grupos\n -> (4)Borrar Camper", "color:blue;");
     var rta = prompt("-> (1)Ver Informacion\n -> (2)Ver Notas\n -> (3)Ver grupos\n -> (4)Borrar Camper");
@@ -49,8 +53,10 @@ if (userchoice == "1"){
         }
             else if (rta == "3"){
             //IMPRIMIR GRUPOS
-
-                }
+                let tamaniocam = (campers.length)
+                console.log(tamaniocam)
+                
+            }
                     else if (rta == "4"){
                         
                         console.log("%c ------Campers Actuales------", "color: #ff0099;");
@@ -68,7 +74,7 @@ if (userchoice == "1"){
     
 } else {
 
-    if (userchoice == "2"){
+    if (Number(userchoice) == 2){
         console.clear()
         console.log("%c ------Menú Trainer------\n   Seleccione la acción a realizar:\n -> (1)Ver informacion\n -> (2)Asignar Sala\n -> (3)Registar nuevos campers\n -> (4)Salir", "color:red;");
         if (rta == "1"){
@@ -76,7 +82,7 @@ if (userchoice == "1"){
         };
     } else {
 
-        if (userchoice == "3"){
+        if (Number(userchoice) == 3){
 
             console.log("%c ------Menú Registrar------\n   Seleccione la acción a realizar:\n -> (1)Campers\n -> (2)Trainers\n -> (3)Registar nuevos campers\n -> (4)Salir", "color:#ff0099;");
             campname = prompt("-> Nombre(s) del Camper");
@@ -107,7 +113,7 @@ if (userchoice == "1"){
 
         } else {
 
-            if (userchoice == "4"){
+            if (Number(userchoice) == 4){
 
                 console.log("%c ------Hasta luego------", "color:#ca9200;");
 
