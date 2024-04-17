@@ -1,3 +1,5 @@
+//--------------------------------------------------------------------------------
+
 console.log("%c\n\n---Crear Personas---","color: #ff0099")
 
 function Person(name,age,gender,eyecolor){
@@ -9,9 +11,13 @@ function Person(name,age,gender,eyecolor){
 
 const Alan = new Person("Alan Brito Delgado",99,"M","Brown");
 const Elsa = new Person("Elsa Pato Anda",-67,"F","Blue");
+const Juan = new Person("Juan Pepito Peréz",978,"Hello world","Red")
+
 console.log(Alan)
 console.log(Elsa)
-console.log("%c\nLlaves de Alan: ","color: #ff89cc",Object.keys(Alan))
+console.log(Juan)
+
+console.log("%c\nLlaves de Alan: ","color: #ff89cc",Object.keys(Juan))
 
 
 //--------------------------------------------------------------------------------
@@ -48,6 +54,7 @@ const Clown = new Book("La divina comedia",Alan,"Horror",1990);
 console.log(Clown)
 
 //--------------------------------------------------------------------------------
+
 
 console.log("%c\n\n---Crear Funcion---","color: #00ff00")
 
