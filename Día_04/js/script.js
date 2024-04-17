@@ -11,9 +11,10 @@ const Alan = new Person("Alan Brito Delgado",99,"M","Brown");
 const Elsa = new Person("Elsa Pato Anda",-67,"F","Blue");
 console.log(Alan)
 console.log(Elsa)
+console.log("%c\nLlaves de Alan: ","color: #ff89cc",Object.keys(Alan))
 
 
-//--------------------------------------------------------
+//--------------------------------------------------------------------------------
 
 
 console.log("%c\n\n---Crear Carros---","color: #7cca92")
@@ -31,7 +32,7 @@ console.log(Carrito1)
 console.log("%c\nDueñ@ del carro:","color: #9fcd70",Carrito1.owner.name)
 
 
-//--------------------------------------------------------
+//--------------------------------------------------------------------------------
 
 
 console.log("%c\n\n---Crear Libro---","color: #ffff00")
@@ -46,8 +47,32 @@ function Book(title,author,gender,year){
 const Clown = new Book("La divina comedia",Alan,"Horror",1990);
 console.log(Clown)
 
+//--------------------------------------------------------------------------------
 
-//--------------------------------------------------------
+console.log("%c\n\n---Crear Funcion---","color: #00ff00")
+
+function Funcion(sumar,restar){
+    this.sumar=sumar
+    this.restar=restar
+};
+const Basic = new Funcion(suma,resta);
+console.log(Basic)
+
+
+function suma(a,b){
+    suma=a+b
+    return suma
+}
+function resta(a,b){
+    resta=a-b
+    return resta
+}
+
+console.log("%c\nLlamando funciones desde el objeto(SUMA)","color: #00ffff",Basic.sumar(10,4))
+console.log("%cLlamando funciones desde el objeto(RESTA)","color: #bbaccc",Basic.restar(50,4))
+
+
+//--------------------------------------------------------------------------------
 
 
 console.log("%c\n\n---Crear/Asignar keys + val---","color: #10aacc")
@@ -60,7 +85,7 @@ console.log(Carrito1)
 console.log("%c\nDueñ@ del carro:","color: #9fcdda",Carrito1.owner.name)
 
 
-//--------------------------------------------------------
+//--------------------------------------------------------------------------------
 
 
 console.log("%c\n\n---Borrar keys + val---","color: #ff0000")
@@ -71,8 +96,5 @@ console.log(Carrito1)
 console.log("%c\nColor del carro:","color: #ff89cc",Carrito1.color, "ya no existe :D")
 
 
-//--------------------------------------------------------
+//--------------------------------------------------------------------------------
 
-function showProps(Car,Carrito1){
-
-}
