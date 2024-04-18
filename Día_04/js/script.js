@@ -41,7 +41,7 @@ console.log("%c\nDueñ@ del carro:","color: #9fcd70",Carrito1.owner.name)
 //--------------------------------------------------------------------------------
 
 
-console.log("%c\n\n---Crear Libro---","color: #ffff00")
+console.log("%c\n\n---Crear Libro---","color: #ffaaa7")
 
 function Book(title,author,gender,year){
     this.title=title
@@ -52,6 +52,17 @@ function Book(title,author,gender,year){
 };
 const Clown = new Book("La divina comedia",Alan,"Horror",1990);
 console.log(Clown)
+
+//--------------------------------------------------------------------------------
+
+console.log("%c\n\n---Crear Número---","color: #ff00cc")
+function Num(val,divisores){
+    this.val=val
+    this.divisores=divisores
+};
+
+const numero15 = new Num(15,[1,3,5,15]);
+console.log(numero15)
 
 //--------------------------------------------------------------------------------
 
