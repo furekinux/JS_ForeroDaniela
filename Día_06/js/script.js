@@ -108,7 +108,6 @@ CreateBankAcc()
 //area. Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and 
 //override the area calculation method. Create an instance of the 'Circle' class and calculate its 
 //area. Similarly, do the same for the 'Triangle' class.
-
 function CreateShape(){
     function Shape(circle,triangle){
         this. Circle=circle
@@ -152,22 +151,119 @@ function CreateShape(){
 }
 console.log("%c\n\n\n               Exercise #5\n","font-size:14px;color: green")
 CreateShape()
+
 //6. Write a small JavaScript program that demonstrates constructor chaining using a hierarchy of 
 //three classes as follows: A is the parent of B which is the parent of C. Modify your definition of 
 //A so that it has exactly one constructor that takes an argument, and show how B and/or C must be 
 //changed to work with it.
+function CreateConstructorChain(){
+    function Chain(A,message){
+        this.Parent=A
+        this.message=message
+    }
+    function A(Child,message){
+        this.Child=Child
+        this.message=message
+    }
+    function B(Child,message){
+        this.Child=Child
+        this.message=message
+    }
+    function C(Child,message){
+        this.Child=Child
+        this.message=message
+    }
 
+    const FunC = new C(NaN,NaN)
+    const FunB = new B(NaN,NaN)
+    const FunA = new A(NaN,NaN)
+    const MyChain = new Chain(FunA,"Hello World")
 
+    FunA.Child=FunB
+    FunA.message=MyChain.message
+    FunB.Child=FunC
+    FunB.message=MyChain.message
+    FunC.message=MyChain.message
 
+    console.log("Chain:",MyChain)
+    console.table(MyChain)
+
+    console.log("\n\nParent of B:",MyChain.Parent)
+    console.table(MyChain.Parent)
+    console.log("\n\nParent of C:",MyChain.Parent.Child)
+    console.table(MyChain.Parent.Child)
+    console.log("\n\nChild C:",MyChain.Parent.Child.Child)
+    console.table(MyChain.Parent.Child.Child)
+}
 console.log("%c\n\n\n               Exercise #6\n","font-size:14px;color: blue")
+CreateConstructorChain()
 
 //7.  A Computer Science department keeps track of its CS students using some custom software. Each
-//student is represented by a Student object that features a pass() method that returns true if and
-//only if the student has all six ticks to pass the year. The department suddenly starts teaching NS 
+//student is represented by a ""Student"" object that features a pass() method that returns true if and
+//only if the student has all six ticks(notas) to pass the year. The department suddenly starts teaching NS 
 //students, who only need four ticks to pass. Using inheritance and polymorphism, show how the 
 //software can continue to keep all Student objects in one list in code without having to change any 
 //classes other than Student.
 
+//NOTAS *4
+//PASS= Ecuación para promedio de notas + Notas pendientes(si las hay)
+function StudentTrack(){
+    function CSstudents(St_ID){
+        this.method= function pass(St_ID){
+            waiting=[]
+            for(const[key,val] of Object.entries(St_ID.ticks)){
+                console.log(val)
+                if(val==undefined){
+                    tick_left=true
+                    waiting.push(key)
+                }else{
+
+                }
+                
+            }
+            if(tick_left=true){
+                console.log("Ticks left:",waiting)
+            }
+        }
+        this.Students={
+            ID_1:St_ID}
+    }
+    function StudentID(ID,tick_1,tick_2,tick_3,tick_4){
+        this.info={
+            ID:ID
+        }
+        this.ticks={
+            tick_1:tick_1,
+            tick_2:tick_2,
+            tick_3:tick_3,
+            tick_4:tick_4,
+        }
+    }
+
+    function Student_List(){
+        console.log(`\nStudents List` )
+        for(const[key,val] of Object.entries(CSD.Students)){
+            console.log(`\nStudent ${key}   ID_Num:${val.info.ID}`);
+            console.table(val.ticks)
+        }
+    }
+
+    const St_114 = new StudentID(114,100,90,80,100)
+    const St_134 = new StudentID(134,100,undefined,80,100)
+
+    const CSD = new CSstudents(St_114)
+    console.log(St_114)
+    console.log(St_134)
+
+    CSD.Students.ID_2=St_134
+    console.log(CSD)
+    console.table(CSD)
+
+    console.log(CSD.method(St_134))
+    Student_List()
+
+}
 
 
 console.log("%c\n\n\n               Exercise #7\n","font-size:14px;color: purple")
+StudentTrack()
