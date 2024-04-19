@@ -2,7 +2,7 @@ function Board(tablero){
     tabtam= tablero.keys;
     for(const[key,value] of Object.entries(tablero)){ /*OBJECT ENTRIES DA LLAVE Y EL VAL */
         line= "\n  "+value.join("  ")
-        console.log(`%c${line}`,"color: #ffffff; font-size: 17.2px")
+        console.log(`%c${line}`,"font-size: 17.2px")
     }
 }
 function printboard(texto){
