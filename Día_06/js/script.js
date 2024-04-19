@@ -63,10 +63,6 @@ function CreateVehicle(){
             doors:doors
         }
     };
-    function Car(doors){
-        this.doors=doors
-    }
-    const Additional = new Car(4)
     const Toyota = new Vehicle("Toyota","Toyota Avalon",2000,4)
     console.log(Toyota)
     console.table(Toyota)
@@ -75,11 +71,11 @@ function CreateVehicle(){
     console.log("%c\n   Toyota instanceof Vehicle:","font-size:14px;color: purple",Toyota instanceof Vehicle)
 
 }
-console.log("%c\n\n               Exercise #3\n","font-size:14px;color: purple")
+console.log("%c\n\n\n               Exercise #3\n","font-size:14px;color: purple")
 CreateVehicle()
 
-//4. Write a JavaScript program that creates a class called "BankAccount" with properties for account 
-//number and balance. Include methods to deposit and withdraw money from the account. Create some 
+//4. Write a JavaScript program that creates a class called "BankAccount" with properties for  
+//account number and balance. Include methods to deposit and withdraw money from the account. Create some 
 //instances of the "BankAccount" class, deposit some money, and withdraw a portion of it.
 function CreateBankAcc(){
     function BankAccount(accnumber,balance){
@@ -103,24 +99,59 @@ function CreateBankAcc(){
     MyAcc.balance=MyAcc.deposit(MyAcc.balance,190)
     console.table(MyAcc)
 
-
-
     console.log("%c\n   MyAcc instanceof Vehicle:","font-size:14px;color: Red",MyAcc instanceof BankAccount)
-
 }
-
-
-console.log("%c\n\n               Exercise #4\n","font-size:14px;color: red")
+console.log("%c\n\n\n               Exercise #4\n","font-size:14px;color: red")
 CreateBankAcc()
+
 //5. Write a JavaScript program that creates a class called 'Shape' with a method to calculate the 
 //area. Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and 
 //override the area calculation method. Create an instance of the 'Circle' class and calculate its 
 //area. Similarly, do the same for the 'Triangle' class.
 
+function CreateShape(){
+    function Shape(circle,triangle){
+        this. Circle=circle
+        this. Triangle=triangle
+    }
+    function Circle(radius){
+        this.radius=radius
+        this.method= function area(radius){
+            area_is=3.14*(radius*radius)
+            return area_is
+        }
+    }
+    function Triangle(base,height){
+        this.base=base
+        this.height=height
+        this.method= function area(base,height){
+            area_is=(base*height)/2
+            return area_is
+        }
+    }
 
+    const Triangle1 = new Triangle(4,7)
+    const Circle1 = new Circle(4)
+    const MyShapes = new Shape(Circle1,Triangle1)
+//-------------------------------------------
+    console.log(MyShapes)
+    console.table(MyShapes)
+//-------------------------------------------
+    console.log("\n\n",Circle1)
+    console.table(Circle1)
+    console.log("Circle1 area:",Circle1.method(Circle1.radius))
+//-------------------------------------------
+    console.log("\n\n",Triangle1)
+    console.table(Triangle1)
+    console.log("Triangle area:",Triangle1.method(Triangle1.base,Triangle1.height))
+//-------------------------------------------
+    console.log("%c\n   Triangle1 instanceof Triangle:","font-size:14px;color: Green",Triangle1 instanceof Triangle)
+    console.log("%c\n   Circle1 instanceof Triangle:","font-size:14px;color: Green",Circle1 instanceof Circle)
 
-console.log("%c\n\n               Exercise #5\n","font-size:14px;color: green")
-
+    console.log("%c\n   MyShapes instanceof Shape:","font-size:14px;color: Green",MyShapes instanceof Shape)
+}
+console.log("%c\n\n\n               Exercise #5\n","font-size:14px;color: green")
+CreateShape()
 //6. Write a small JavaScript program that demonstrates constructor chaining using a hierarchy of 
 //three classes as follows: A is the parent of B which is the parent of C. Modify your definition of 
 //A so that it has exactly one constructor that takes an argument, and show how B and/or C must be 
@@ -128,7 +159,7 @@ console.log("%c\n\n               Exercise #5\n","font-size:14px;color: green")
 
 
 
-console.log("%c\n\n               Exercise #6\n","font-size:14px;color: blue")
+console.log("%c\n\n\n               Exercise #6\n","font-size:14px;color: blue")
 
 //7.  A Computer Science department keeps track of its CS students using some custom software. Each
 //student is represented by a Student object that features a pass() method that returns true if and
@@ -139,4 +170,4 @@ console.log("%c\n\n               Exercise #6\n","font-size:14px;color: blue")
 
 
 
-console.log("%c\n\n               Exercise #7\n","font-size:14px;color: purple")
+console.log("%c\n\n\n               Exercise #7\n","font-size:14px;color: purple")
