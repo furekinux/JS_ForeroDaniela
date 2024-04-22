@@ -211,20 +211,37 @@ function StudentTrack(){
     function CSstudents(St_ID){
         this.method= function pass(St_ID){
             waiting=[]
+            sum=0
             for(const[key,val] of Object.entries(St_ID.ticks)){
-                console.log(val)
+                
                 if(val==undefined){
-                    tick_left=true
                     waiting.push(key)
                 }else{
-
+                    sum=sum+val
                 }
                 
             }
-            if(tick_left=true){
-                console.log("Ticks left:",waiting)
+            tam_wait=waiting.length
+            if(tam_wait>0){
+                console.log("%c\n > Student ID","color: purple", St_ID.info.ID,"you have ticks left:")
+
+                for(item in waiting){
+                    console.log(" >",waiting[item],"\n")
+                }
+                console.log("%c\n You failed :(","color: red")
+                
+            } else{
+                prom=sum/4
+                console.log("%c\n > Student ID","color: purple", St_ID.info.ID, "your % of the year is:",prom)
+                if (prom>72){
+                    console.log("%c\n You passed :D","color: green")
+                } else{
+                    console.log("%c\n You failed","color: red")
+
+                }
             }
         }
+
         this.Students={
             ID_1:St_ID}
     }
@@ -259,8 +276,9 @@ function StudentTrack(){
     console.log(CSD)
     console.table(CSD)
 
-    console.log(CSD.method(St_134))
     Student_List()
+
+    console.log(CSD.method(St_114))
 
 }
 
