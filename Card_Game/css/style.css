@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fjalla+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+html{
+    font-family: "Acme", sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #270619;
+    height: 100%;
+    color: #e7118e;
+    cursor: url("./storage/img/carrot-svgrepo-com.svg") 16 16;
+}
+
+/*<svg viewBox="-1.5 0 255 255" xmlns="http://www.w3.org/2000/svg" </svg>*/
+body{
+    background-color: #ee7bbe;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.square_1{
+    margin: 2em;
+    z-index: 3;
+    width: 95em;
+    height: 40em;
+    background-color: #ffffff;
+    z-index: 1;
+    border: double 1.5em #be369c;
+    /*border-image: url('/storage/img/easter-bunny-rabbit-svgrepo-com.svg') space;*/
+    overflow: scroll;
+}
+.square_1::-webkit-scrollbar{
+    display: none;
+}
+img{
+    width: 16em;
+    margin: 0 -2em 0 -2em ;
+    padding: 0;
+}
+button{
+    position: relative;
+    top: 5em;
+    font-family: "Acme", sans-serif;
+    width: 6em;
+    height: 2.4em;
+    border-radius: 3em;
+    background-color: #f84fb2;
+    border: solid 0.2em #db0e86;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0.5em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+span{
+    color: #ff41b0;
+    text-decoration: underline;}
+h1{
+    position: relative;
+    top: 1em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.rules{
+    top:2em;
+    text-align: start;
+    width: 25em;
+    border: 0.6em solid #db3f9a;
+    border-left: 0.5em double #ff80ca;
+    border-right: 0.5em double #ff80ca;
+    border-radius: 1.5em 0em;
+    padding: 0.5em;
+    -webkit-padding-start: 1.5em;
+    padding-bottom: 2em;
+    padding-top: 2.5em;
+    position:relative;
+    animation: slide-up 2s 0s;
+}
+@keyframes slide-up {
+    0%{
+        opacity: 10%;
+        transform: translateY(3em);
+    }
+}
+#rulesCont{
+    top: 5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    color:#501236;
+    margin-bottom: 0.4em;
+}
+
+
+#start,#showRules{
+    top:4em;
+}
+.menu_button{
+    position: relative;
+    width: 20em;
+    height: 3em;
+    font-size: 1em;
+}
+#back{
+    top: 25em;
+    position: absolute;
+}
+
+.logoBun{
+    position: relative;
+    top:2em;
+    width: 15em;
+    z-index: 5;
+    filter: drop-shadow(2px 2px 0 #a1276e)
+        drop-shadow(-2px 2px 0 #a1276e)
+        drop-shadow(2px -2px 0 #a1276e)
+        drop-shadow(-2px -2px 0 #a1276e);
+    animation: boink 3s 0s;
+
+}
+@keyframes boink {
+    0%{
+        transform: scale(90%);
+    }
+    30%{
+        transform: scale(100%);
+    }
+    35%{
+        transform: translateX(1em) translateY(-2em) rotate(20deg);
+    }
+    40%{
+        transform: translateX(0em) translateY(0em) rotate(0deg);
+    }
+    45%{
+        transform: translateX(-1em) translateY(-2em) rotate(-20deg);
+    }
+    50%{
+        transform: translateX(0em) translateY(0em) rotate(0deg);
+    }
+    54%{
+        transform: translateX(0em) translateY(-3em) rotate(0deg);
+    }
+    58%{
+        transform: translateX(0em) translateY(0em) rotate(0deg);
+    }
+    63%{
+        transform: translateX(0em) translateY(-4em) rotate(0deg);
+    }
+    69%{
+        transform: translateX(0em) translateY(0em) rotate(0deg);
+    }
+
+}
+button:hover{
+    color: #ffffff;
+    transform: scale(110%);
+    animation: hoverWee 0.3s;
+}
+
+@keyframes hoverWee {
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(110%);
+    }
+    
+}
+
+.title{
+    text-align: center;
+    position: relative;
+    top: 3em;
+    font-size: 4.5em;
+    font-weight: 900;
+    color: #ffffff;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 0 #c52c85)
+        drop-shadow(-2px 2px 0 #c52c85)
+        drop-shadow(2px -2px 0 #c52c85)
+        drop-shadow(-2px -2px 0 #c52c85);
+}
+#white{
+    right: 2.5em;
+}
+#jack{
+    left: 2em;
+}
