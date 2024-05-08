@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedéx</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="https://www.svgrepo.com/show/276264/pokeball-pokemon.svg" type="image/x-icon">
+</head>
+<body>
+    <img class="pokedex" src="/storage/img/pokedex.png"/>
+        <div id="showUp">Who?</div>
+        <div id="sprite"></div>
+        <input id="pokeId" type="text" placeholder="Name or Number"></input>
+        <button onclick="fetchPoke()" id="myBtn" type="submit" hidden></button>
+    
+    <div class="buttons">
+        <button for="pokeId" onclick="minus_id()" id="prev">Prev <</button>
+        <button for="pokeId"  onclick="plus_id()" id="next">> Next</button>
+    </div>
+</body>
+<script src="/js/script.js"></script>
+</html>
